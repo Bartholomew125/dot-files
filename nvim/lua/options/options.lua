@@ -22,8 +22,10 @@ vim.diagnostic.config({
 -- Set signcolumn to static
 vim.o.signcolumn = "yes"
 
+-- Keep cursor 20 lines from top and bottom
 vim.o.scrolloff = 20
 
+vim.o.winborder = "rounded"
 
 
 vim.g.have_nerd_font = true
