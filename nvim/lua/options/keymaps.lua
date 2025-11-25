@@ -52,6 +52,12 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to down window" })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to up window" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
+-- Window moving
+vim.keymap.set("n", "<S-h>", "<C-w>H", { desc = "Move window left" })
+vim.keymap.set("n", "<S-j>", "<C-w>J", { desc = "Move window down" })
+vim.keymap.set("n", "<S-k>", "<C-w>K", { desc = "Move window up" })
+vim.keymap.set("n", "<S-l>", "<C-w>L", { desc = "Move window right" })
+
 -- Toggle terminal lazygit
 vim.keymap.set("n", "<leader>g", "<cmd>lua _lazygit_toggle()<cr>", { desc = "Toggle lazygit terminal" })
 
