@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.bo.commentstring = "# %s"
   end,
 })
+
+vim.api.nvim_create_autocmd("BufRead", {
+    pattern = "*.csv",
+    callback = function()
+        vim.cmd("CsvViewEnable")
+    end,
+})
