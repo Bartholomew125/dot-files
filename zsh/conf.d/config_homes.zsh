@@ -3,9 +3,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export GIT_CONFIG_GLOBAL="$HOME/.config/git/config"
-export CABAL_DIR="$HOME/.config/cabal"
-export CARGO_HOME="$HOME/.config/cargo"
+export GIT_CONFIG_GLOBAL="$XDG_CONFIG_HOME/git/config"
+export CABAL_DIR="$XDG_CONFIG_HOME/cabal"
+export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 
 # Used xdg-ninja to create these exports
 
