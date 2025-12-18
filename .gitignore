@@ -44,6 +44,8 @@ glow
 hypr
 qutebrowser/bookmarks
 qutebrowser/qsettings
+qutebrowser/autoconfig.yml
+qutebrowser/greasemonkey
 lazygit
 user-dirs.dirs
 user-dirs.locale
