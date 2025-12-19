@@ -10,6 +10,7 @@ export CARGO_HOME="$XDG_CONFIG_HOME/cargo"
 # Used xdg-ninja to create these exports
 
 # ghcup
+export GHCUP_USE_XDG_DIRS=true
 export GHCUP_HOME="$XDG_DATA_HOME/ghcup"
 # Source ghcup
 [ -f "$GHCUP_HOME/env" ] && . "$GHCUP_HOME/env" # ghcup-env
@@ -43,3 +44,6 @@ alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 
 # nvm
 export NVM_DIR="$XDG_DATA_HOME"/nvm
+
+# Python history
+export PYTHON_HISTORY="$XDG_DATA_HOME"/python/
