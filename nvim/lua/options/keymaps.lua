@@ -30,8 +30,8 @@ vim.keymap.set("n", "<C-n>", "<cmd>:Neotree toggle position=left<cr>", { desc = 
 -- Remap line commenting from gc to <leader> /
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment line/lines" })
 
--- Run the run.bat file in the current directory
-vim.keymap.set("n", "<leader>!", "<cmd>:!run.bat<cr>", { desc = "Run the run.bat in the current directory" })
+-- Run the run.sh file in the current directory
+vim.keymap.set("n", "<leader>!", "<cmd>:!./run.sh<cr>", { desc = "Run the run.sh in the current directory" })
 
 -- Display errors and warnings
 vim.keymap.set("n", "<leader>e", "<C-w>d", { remap = true, desc = "Display errors and warnings" })
