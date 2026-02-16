@@ -7,7 +7,7 @@ Config(
   x: Fraction(0.5),
 
   // The vertical position, works the same as `x`
-  y: Fraction(0.2),
+  y: Absolute(0),
 
   // The width of the runner
   width: Absolute(800),
@@ -44,8 +44,10 @@ Config(
   // in the results. As in it works as a priority for the plugins.
   plugins: [
     "libapplications.so",
+    "libsymbols.so",
+    "libshell.so",
+    "libtranslate.so",
     "librink.so",
-    "libshell.so"
   ],
 
   keybinds: [
