@@ -19,6 +19,44 @@ vim.api.nvim_create_autocmd("BufRead", {
     end,
 })
 
+vim.api.nvim_create_autocmd({"TextChanged", "TextChangedI"}, {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype == "typst" and vim.bo.modified and vim.fn.expand('%') ~= '' then
+      vim.cmd("silent write")
+    end
+  end
+})
+
+local typst_jobs = {}
+
+-- Start watcher on open
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*.typ",
+  callback = function(args)
+    local file = vim.api.nvim_buf_get_name(args.buf)
+    if typst_jobs[args.buf] then return end
+
+    local job = vim.fn.jobstart({"typst", "watch", file}, {
+      detach = true
+    })
+
+    typst_jobs[args.buf] = job
+  end
+})
+
+-- Stop watcher on close
+vim.api.nvim_create_autocmd("BufWipeout", {
+  pattern = "*.typ",
+  callback = function(args)
+    local job = typst_jobs[args.buf]
+    if job then
+      vim.fn.jobstop(job)
+      typst_jobs[args.buf] = nil
+    end
+  end
+})
+
 function smart_write()
     local current_file = vim.fn.expand('%:p')
     local basename     = vim.fn.expand('%:t:r')
