@@ -26,10 +26,7 @@ export NPM_CONFIG_INIT_MODULE="$XDG_CONFIG_HOME"/npm/config/npm-init.js
 export NPM_CONFIG_CACHE="$XDG_CACHE_HOME"/npm
 export NPM_CONFIG_TMP="$XDG_RUNTIME_DIR"/npm
 
-# openjdk
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-
-# openjfk
+# openjdk / java
 export _JAVA_OPTIONS="-Djava.util.prefs.userRoot=${XDG_CONFIG_HOME}/java -Djavafx.cachedir=${XDG_CACHE_HOME}/openjfx"
 
 # stack
@@ -47,3 +44,14 @@ export NVM_DIR="$XDG_DATA_HOME"/nvm
 
 # Python history
 export PYTHON_HISTORY="$XDG_DATA_HOME"/python/
+
+# go
+GOPATH="$XDG_DATA_HOME"/go
+
+# android
+export ANDROID_USER_HOME="$XDG_DATA_HOME"/android
+alias adb='HOME="$XDG_DATA_HOME"/android adb'
+export ANDROID_HOME="$XDG_DATA_HOME"/android/sdk
+
+# gradle
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
