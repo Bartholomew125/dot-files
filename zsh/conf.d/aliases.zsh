@@ -1,4 +1,5 @@
 alias ls="eza -al --icons --sort=extension"
+alias lss="eza -al --icons --sort=extension --total-size"
 alias n="nvim"
 alias lg="lazygit"
 alias o="open"
