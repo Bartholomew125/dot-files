@@ -1,0 +1,8 @@
+/* Fallback for any character not present in the page font */
+* {
+    font-family: 
+        system-ui,           /* normal UI font */
+        sans-serif,          /* normal text fallback */
+        "VictorMono Nerd Font",  /* Nerd Font fallback */
+        monospace;
+}

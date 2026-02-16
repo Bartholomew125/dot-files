@@ -3,7 +3,7 @@ config.load_autoconfig()
 
 c.tabs.position = "top"
 c.auto_save.session = True
-c.fonts.default_family = "Noto Color Emoji, sans-serif"
+c.content.user_stylesheets = ["~/.config/qutebrowser/css/nerdfont-fallback.css"]
 
 # PURPLE = "rgba(215,137,255,0.8)"
 # TRANSLUCENT = "rgba(0,0,0,0)"
