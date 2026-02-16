@@ -2,7 +2,7 @@
 fzf_fd() {
     local file
     file=$(find ~/. -type f -o -type d 2>/dev/null \
-        | fzf --height 40% --reverse \
+        | fzf --height 100% --reverse \
               --bind 'tab:down,shift-tab:up' \
               --preview='head -$LINES {}')
 
