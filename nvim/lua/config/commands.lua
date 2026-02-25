@@ -66,8 +66,8 @@ function smart_write()
 
     vim.cmd("w")
 
-    if extension == ".typ" then
-        vim.fn.jobstart({"tystp",  "compile", current_file})
+    if extension == "typ" then
+        vim.fn.jobstart({"typst",  "compile", current_file})
 	return
     end
 
