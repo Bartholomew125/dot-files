@@ -76,3 +76,7 @@ vim.keymap.set("n", "<S-tab>", "<cmd>tabnext -<cr>", { desc = "Go to previous ta
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", "<cmd> lua require('undotree').toggle()<cr>", { desc = "Toggle undotree" })
+
+-- Calcium
+vim.keymap.set("v", "<leader>ca", "<cmd>Calcium append<cr>", { desc = "Evaluate highlighted math expression and append at end." })
+vim.keymap.set("v", "<leader>cr", "<cmd>Calcium replace<cr>", { desc = "Evaluate highlighted math expression and replace." })
