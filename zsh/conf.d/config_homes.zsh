@@ -43,7 +43,7 @@ alias wget="wget --hsts-file=$XDG_DATA_HOME/wget-hsts"
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 
 # Python history
-export PYTHON_HISTORY="$XDG_DATA_HOME"/python/
+export PYTHON_HISTORY="$XDG_DATA_HOME/python/.python_history"
 
 # go
 GOPATH="$XDG_DATA_HOME"/go
