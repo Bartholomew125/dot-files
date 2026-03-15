@@ -25,10 +25,29 @@ bindkey '^R' search_command_history
 # Fuzzy finder for files and directories
 fzf_fd() {
     local file
-    file=$(find ~/. -type f -o -type d 2>/dev/null \
-        | fzf --height 100% --reverse \
-              --bind 'tab:down,shift-tab:up' \
-              --preview='head -$LINES {}')
+    file=$(fd . ~ \
+               --hidden \
+               --no-ignore \
+               --exclude .git \
+               --exclude .cache \
+               --exclude Android \
+               --exclude .dropbox \
+               --exclude .dropbox-dist \
+               --exclude .android \
+               --exclude .java \
+               --exclude .pki \
+               --exclude AndroidStudioProjects \
+               --exclude undo \
+               2>/dev/null \
+         | fzf --height 100% --reverse \
+               --bind 'tab:down,shift-tab:up' \
+               --preview='
+                    if [[ -d {} ]]; then
+                        tree -C {} | head -100;
+                    else
+                        bat --color=always --line-range :$LINES {};
+                    fi
+                ')
 
     if [[ -z "$file" ]]; then
         zle reset-prompt
