@@ -35,6 +35,17 @@ vim.keymap.set("n", "<leader>!", "<cmd>:!./run.sh<cr>", { desc = "Run the run.sh
 -- Display errors and warnings
 vim.keymap.set("n", "<leader>e", "<C-w>d", { remap = true, desc = "Display errors and warnings" })
 
+-- Apply available fix for error/warning lsp.
+local function apply_first_code_action()
+    vim.lsp.buf.code_action({
+        apply = true,
+        filter = function(action)
+            return true
+        end,
+    })
+end
+vim.keymap.set("n", "<leader>ca", apply_first_code_action, { remap = true, desc = "Apply fix for error/warning" })
+
 -- Stop highlighting search
 vim.keymap.set("n", "<ESC>", "<cmd>noh<cr>", { desc = "Unhighlight search" })
 
