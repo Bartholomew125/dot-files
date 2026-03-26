@@ -2,9 +2,14 @@
 [Default Applications]
 application/pdf=zathura.desktop
 image/png=zathura.desktop
-text/html=qutebrowser.desktop
-x-scheme-handler/http=qutebrowser.desktop
-x-scheme-handler/https=qutebrowser.desktop
+text/html=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
+x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/about=qutebrowser.desktop
 x-scheme-handler/unknown=qutebrowser.desktop
 image/svg+xml=zathura.desktop
+application/json=qutebrowser.desktop
+application/rdf+xml=qutebrowser.desktop
+application/rss+xml=qutebrowser.desktop
+application/xhtml+xml=qutebrowser.desktop
+application/xml=qutebrowser.desktop
