@@ -23,9 +23,8 @@ require("telescope").setup({
   },
 })
 
-
--- Neotree
-vim.keymap.set("n", "<C-n>", "<cmd>:Neotree toggle position=left<cr>", { desc = "Toggle directory tre (Neotree)" })
+-- MiniFiles
+vim.keymap.set("n", "<C-n>", "<cmd>:lua MiniFiles.open()<cr>", { desc = "Toggle directory tree (mini.files)" })
 
 -- Remap line commenting from gc to <leader> /
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, silent = true, desc = "Comment line/lines" })
