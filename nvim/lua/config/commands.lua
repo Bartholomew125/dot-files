@@ -58,6 +58,10 @@ vim.api.nvim_create_autocmd("BufRead", {
 -- })
 
 function smart_write()
+    if vim.bo.buftype ~= '' then
+        return
+    end
+
     local current_file = vim.fn.expand('%:p')
     local basename     = vim.fn.expand('%:t:r')
     local extension    = vim.fn.expand('%:e')
