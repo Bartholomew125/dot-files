@@ -1,6 +1,10 @@
 vim=vim
 -- Keymaps have also been defined for blink.cmp. See plugin definition.
 
+-- Default moving between wrapped lines with gj and gk to k and j
+vim.keymap.set("n", "j", "gj", { desc = "Move cursor down, regardless of line wrapping" })
+vim.keymap.set("n", "k", "gk", { desc = "Move cursor up, regardless of line wrapping" })
+
 -- Telescope
 local telescope = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", telescope.find_files, { desc = "Search for files (Telescope)" })
