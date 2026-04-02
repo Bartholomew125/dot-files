@@ -26,5 +26,23 @@ return {
             ensure_installed = { "jdtls" }, 
             automatic_installation = false
         }
+
+    vim.lsp.config('jdtls', {
+        root_markers = { 'pom.xml', 'build.gradle' },
+        settings = {
+            java = {
+                configuration = {
+                    runtimes = {
+                        {
+                            name = "JavaSE-26",
+                            path = "/usr/lib/jvm/java-26-openjdk",
+                            default = true,
+                        },
+                    },
+                },
+            },
+        },
+    })
+
     end,
 }
