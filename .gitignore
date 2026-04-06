@@ -36,23 +36,22 @@ tidal-hifi
 trizen
 .zcompdump
 histfile
-hypr
 m2
 anydesk
 nvm
 glow
-hypr/hyprpaper.conf
-hypr/hypridle.conf
-hypr/conf.d/autostart.conf
-hypr/conf.d/envvars.conf
-hypr/conf.d/input.conf
-hypr/conf.d/keybinds.conf
-hypr/conf.d/monitors.conf
+hypr
+# hypr/hyprpaper.conf
+# hypr/hypridle.conf
+# hypr/conf.d/autostart.conf
+# hypr/conf.d/envvars.conf
+# hypr/conf.d/input.conf
+# hypr/conf.d/keybinds.conf
+# hypr/conf.d/monitors.conf
 qutebrowser/bookmarks
 qutebrowser/qsettings
 qutebrowser/autoconfig.yml
 qutebrowser/greasemonkey
-lazygit
 user-dirs.dirs
 user-dirs.locale
 waybar
