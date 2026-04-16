@@ -17,7 +17,6 @@ search_command_history() {
 
     LBUFFER+="$cmd"
     zle reset-prompt
-    zle accept-line
 }
 zle -N search_command_history
 bindkey '^R' search_command_history
