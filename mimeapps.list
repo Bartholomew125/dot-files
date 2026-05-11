@@ -13,3 +13,4 @@ application/rdf+xml=qutebrowser.desktop
 application/rss+xml=qutebrowser.desktop
 application/xhtml+xml=qutebrowser.desktop
 application/xml=qutebrowser.desktop
+x-scheme-handler/observer=observer.desktop
