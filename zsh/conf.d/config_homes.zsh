@@ -55,3 +55,7 @@ export ANDROID_HOME="$XDG_DATA_HOME"/android/sdk
 
 # gradle
 export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+
+# aws
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
