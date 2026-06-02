@@ -183,7 +183,7 @@ c.editor.command = ['kitty', '--title', 'qutebrowser-floating-url-edit', 'nvim',
 # `colors.webpage.darkmode.policy.images` to `never`.  - "With selective
 # image inversion": qutebrowser default settings.
 # Type: Bool
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 
 # Bindings for normal mode
 config.bind('eu', 'edit-url')
