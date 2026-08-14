@@ -190,3 +190,32 @@ config.bind('eu', 'edit-url')
 
 # Leave passthrough mode fix
 config.bind('§', 'mode-leave', mode='passthrough')
+
+
+
+from qutebrowser.api import cmdutils
+from qutebrowser.qt.core import QTimer
+
+_timer = None
+
+def _do_reload():
+    from qutebrowser.utils import objreg
+    window = objreg.get('last-focused-main-window')
+    tabbed_browser = objreg.get('tabbed-browser', scope='window', window=window.win_id)
+    tabbed_browser.widget.currentWidget().reload()
+
+@cmdutils.register()
+def toggle_auto_reload():
+    """Toggle continuous reloading of the current page."""
+    global _timer
+    if _timer is None:
+        _timer = QTimer()
+        _timer.setInterval(1000)
+        _timer.timeout.connect(_do_reload)
+
+    if _timer.isActive():
+        _timer.stop()
+    else:
+        _timer.start()
+
+config.bind('cr', 'toggle-auto-reload')
