@@ -16,3 +16,8 @@ x-scheme-handler/about=qutebrowser.desktop
 x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
 x-scheme-handler/unknown=qutebrowser.desktop
+image/bmp=org.pwmt.zathura-pdf-mupdf.desktop
+
+[Added Associations]
+application/vnd.microsoft.windows.thumbnail-cache=nvim-kitty.desktop;
+image/bmp=org.pwmt.zathura-pdf-mupdf.desktop;
