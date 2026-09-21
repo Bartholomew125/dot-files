@@ -59,3 +59,9 @@ export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
 # aws
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
+
+# sqlite
+export SQLITE_HISTORY="$XDG_CACHE_HOME"/sqlite_history
+
+# rustup
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
