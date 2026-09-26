@@ -35,7 +35,7 @@ return {
                     runtimes = {
                         {
                             name = "JavaSE-26",
-                            path = "/usr/lib/jvm/java-26-openjdk",
+                            path = os.getenv("JAVA_HOME"),
                             default = true,
                         },
                     },
